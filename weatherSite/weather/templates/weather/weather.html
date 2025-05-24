@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Info</title>
+</head>
+<body>
+    <h1>Weather Information</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if current_weather %}
+        <h2>Weather Data</h2>
+        <ul>
+            {% for key, value in current_weather.items %}
+                {% if key == "picture" %}
+                    <li><img src="{{ value }}" alt="Weather image" style="max-width:300px"></li>
+                {% else %}
+                    <li>{{ value }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if forecast_weather %}
+    <h2>Forecast Data</h2>
+    {% for date, day_data in forecast_weather.items %}
+        <h3>{{ date }}</h3>
+        <ul>
+            {% for key, value in day_data.items %}
+                {% if key == "picture" %}
+                    <li><img src="{{ value }}" alt="Weather Image" style="max-width:300px"></li>
+                {% else %}
+                    <li>{{ value }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endif %}
+</body>
+</html>
