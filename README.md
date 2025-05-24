@@ -14,7 +14,6 @@ Weather data is retrieved from the [WeatherAPI](https://www.weatherapi.com/) ser
 
 ```bash
 git clone https://github.com/damiraskme/weather-site.git
-touch .env
 cd weatherSite
 ```
 ### 2. Add the following line to .env
