@@ -9,7 +9,8 @@ import os
 
 load_dotenv()
 def pretify_current_weather(api_response):
-    pretify = {
+    try:
+        pretify = {
     "picture": api_response["current"]["condition"]["icon"],
     'condition': f"Weather: {api_response["current"]["condition"]["text"]}",
     'temp_c': f"Temperature: {api_response["current"]["temp_c"]}°C / {api_response["current"]["temp_f"]}°F",
@@ -22,13 +23,15 @@ def pretify_current_weather(api_response):
     'uv': f"UV index: {api_response["current"]["uv"]}",
     'humidity': f"Humidity: {api_response["current"]["humidity"]}%",
     'last_updated': f"Last update: {api_response["current"]["last_updated"]}",
-
  }
+    except:
+        return None
     return pretify
 
 def pretify_future_weather(api_response):
     pretify = {}
-    for i in api_response:
+    try:
+     for i in api_response:
         pretify[i] = {
             "picture": api_response[i]["condition"]["icon"],
             "temp": f"Temp: {api_response[i]["avgtemp_c"]}°C / {api_response[i]["avgtemp_f"]}°F",
@@ -36,6 +39,8 @@ def pretify_future_weather(api_response):
             'daily_chance_of_rain': f"Chance of rain: {api_response[i]["daily_chance_of_rain"]}%",
             'daily_chance_of_snow': f"Chance of snow: {api_response[i]["daily_chance_of_snow"]}%"
         }
+    except:
+        return None
     
     return pretify
 

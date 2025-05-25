@@ -23,7 +23,9 @@
             {% endfor %}
         </ul>
     {% endif %}
-
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
     {% if forecast_weather %}
     <h2>Forecast Data</h2>
     {% for date, day_data in forecast_weather.items %}
