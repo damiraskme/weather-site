@@ -14,7 +14,7 @@ def weather(request):
           current = current_weather(location)
           forecast = forecast_weather(location)
           if(current == None or forecast == None):
-             error = "Wrong location or API error"
+            error = "Wrong location or API error"
              
   else:
     form = locForm()

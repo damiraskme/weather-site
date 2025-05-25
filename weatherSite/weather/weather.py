@@ -11,18 +11,18 @@ load_dotenv()
 def pretify_current_weather(api_response):
     try:
         pretify = {
-    "picture": api_response["current"]["condition"]["icon"],
-    'condition': f"Weather: {api_response["current"]["condition"]["text"]}",
-    'temp_c': f"Temperature: {api_response["current"]["temp_c"]}°C / {api_response["current"]["temp_f"]}°F",
-    'feelslike_c': f"Feels like: {api_response["current"]["feelslike_c"]}°C / {api_response["current"]["feelslike_f"]}°F",
-    'cloud': f"Cloudness: {api_response["current"]["cloud"]}%",
-    'gust_kph': f"Gust: {api_response["current"]["gust_kph"]} km/h {api_response["current"]["gust_mph"]} mph",
-    'wind_degree': f"Wind: {api_response["current"]["wind_degree"]}{api_response["current"]["wind_dir"]}",
-    'wind_kph': f"Wind speed: {api_response["current"]["wind_kph"]} km/h {api_response["current"]["wind_mph"]} mph",
-    'pressure_mb': f"Pressure: {api_response["current"]["pressure_mb"]}",
-    'uv': f"UV index: {api_response["current"]["uv"]}",
-    'humidity': f"Humidity: {api_response["current"]["humidity"]}%",
-    'last_updated': f"Last update: {api_response["current"]["last_updated"]}",
+            "picture": api_response["current"]["condition"]["icon"],
+            'condition': f"Weather: {api_response["current"]["condition"]["text"]}",
+            'temp_c': f"Temperature: {api_response["current"]["temp_c"]}°C / {api_response["current"]["temp_f"]}°F",
+            'feelslike_c': f"Feels like: {api_response["current"]["feelslike_c"]}°C / {api_response["current"]["feelslike_f"]}°F",
+            'cloud': f"Cloudness: {api_response["current"]["cloud"]}%",
+            'gust_kph': f"Gust: {api_response["current"]["gust_kph"]} km/h {api_response["current"]["gust_mph"]} mph",
+            'wind_degree': f"Wind: {api_response["current"]["wind_degree"]}{api_response["current"]["wind_dir"]}",
+            'wind_kph': f"Wind speed: {api_response["current"]["wind_kph"]} km/h {api_response["current"]["wind_mph"]} mph",
+            'pressure_mb': f"Pressure: {api_response["current"]["pressure_mb"]}",
+            'uv': f"UV index: {api_response["current"]["uv"]}",
+            'humidity': f"Humidity: {api_response["current"]["humidity"]}%",
+            'last_updated': f"Last update: {api_response["current"]["last_updated"]}",
  }
     except:
         return None
