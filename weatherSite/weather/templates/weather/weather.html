@@ -16,7 +16,7 @@
         <ul>
             {% for key, value in current_weather.items %}
                 {% if key == "picture" %}
-                    <li><img src="{{ value }}" alt="Weather image" style="max-width:300px"></li>
+                    <li><img src="{{ value }}" alt="Weather image" style="max-width:300px;"></li>
                 {% else %}
                     <li>{{ value }}</li>
                 {% endif %}
@@ -33,7 +33,7 @@
         <ul>
             {% for key, value in day_data.items %}
                 {% if key == "picture" %}
-                    <li><img src="{{ value }}" alt="Weather Image" style="max-width:300px"></li>
+                    <li><img src="{{ value }}" alt="Weather Image" style="max-width:300px;"></li>
                 {% else %}
                     <li>{{ value }}</li>
                 {% endif %}
@@ -41,6 +41,8 @@
         </ul>
     {% endfor %}
 {% endif %}
+Made by Damir Z <a href="https://github.com/damiraskme/weather-site" title="github">Github</a>
 Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+<a href="https://www.linkedin.com/school/pmaccelerator/"><img src="https://media.licdn.com/dms/image/v2/C560BAQERjWEoRZ15Tg/company-logo_200_200/company-logo_200_200/0/1656545579397/productmanagerinterview_logo?e=1753920000&v=beta&t=Pq-GcqEuirDyOwm4Uk_vm8GllqExmWxNw3mrbvRV8d4" style="max-width: 200px;"></a>
 </body>
 </html>
