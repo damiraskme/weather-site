@@ -6,6 +6,9 @@ This Django web application allows users to enter a **location** or **zipcode** 
 
 Weather data is retrieved from the [WeatherAPI](https://www.weatherapi.com/) service.
 
+# Showcase
+https://youtu.be/uGSqnm1WreE
+
 ---
 
 ## Setup Instructions
